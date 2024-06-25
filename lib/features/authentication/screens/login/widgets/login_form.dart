@@ -1,6 +1,8 @@
+import 'package:e_mall/features/authentication/screens/signup/signup.dart';
 import 'package:e_mall/utils/constants/sizes.dart';
 import 'package:e_mall/utils/constants/text_strings.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
 
 class LoginForm extends StatelessWidget {
@@ -18,7 +20,7 @@ class LoginForm extends StatelessWidget {
           children: [
             ///Email
             TextFormField(
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 prefixIcon: Icon(Iconsax.direct_right),
                 labelText: TTexts.email,
               ),
@@ -29,7 +31,7 @@ class LoginForm extends StatelessWidget {
 
             ///Password
             TextFormField(
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 prefixIcon: Icon(Iconsax.password_check),
                 labelText: TTexts.password,
                 suffixIcon: Icon(Iconsax.eye_slash),
@@ -54,7 +56,7 @@ class LoginForm extends StatelessWidget {
                 ///Forget Password
                 TextButton(
                     onPressed: () {},
-                    child: Text(TTexts.forgetPassword)),
+                    child: const Text(TTexts.forgetPassword)),
               ],
             ),
             const SizedBox(
@@ -65,7 +67,7 @@ class LoginForm extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
-                  onPressed: () {}, child: Text(TTexts.signIn)),
+                  onPressed: () {}, child: const Text(TTexts.signIn)),
             ),
             const SizedBox(
               height: TSizes.spaceBtwItems,
@@ -75,8 +77,8 @@ class LoginForm extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               child: OutlinedButton(
-                  onPressed: () {},
-                  child: Text(TTexts.createAccount)),
+                  onPressed: () =>Get.to(()=>const SignupScreen()),
+                  child: const Text(TTexts.createAccount)),
             ),
           ],
         ),
