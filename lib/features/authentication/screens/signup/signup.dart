@@ -1,7 +1,10 @@
+import 'package:e_mall/common/widgets/login_signup/form_divider.dart';
+import 'package:e_mall/features/authentication/screens/signup/widgets/signup_form.dart';
+import 'package:e_mall/common/widgets/login_signup/social_buttons.dart';
 import 'package:e_mall/utils/constants/sizes.dart';
 import 'package:e_mall/utils/constants/text_strings.dart';
 import 'package:flutter/material.dart';
-import 'package:iconsax_flutter/iconsax_flutter.dart';
+import 'package:get/get.dart';
 
 class SignupScreen extends StatelessWidget {
   const SignupScreen({super.key});
@@ -14,6 +17,7 @@ class SignupScreen extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.all(TSizes.defaultSpace),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               ///TItle
               Text(
@@ -25,77 +29,15 @@ class SignupScreen extends StatelessWidget {
               ),
 
               ///Form
-              Form(
-                  child: Column(
-                children: [
-                  Row(
-                    children: [
-                      ///Firstname and lastname
-                      Expanded(
-                        child: TextFormField(
-                          expands: false,
-                          decoration: const InputDecoration(
-                            labelText: TTexts.firstName,
-                            prefixIcon: Icon(Iconsax.user),
-                          ),
-                        ),
-                      ),
-                      const SizedBox(
-                        width: TSizes.spaceBtwInputField,
-                      ),
-                      Expanded(
-                        child: TextFormField(
-                          expands: false,
-                          decoration: const InputDecoration(
-                            labelText: TTexts.lastName,
-                            prefixIcon: Icon(Iconsax.user),
-                          ),
-                        ),
-                      )
-                    ],
-                  ),
-                  const SizedBox(height: TSizes.spaceBtwInputField,),
-                  ///Username
-                  TextFormField(
-                    expands: false,
-                    decoration: const InputDecoration(
-                      labelText: TTexts.username,
-                      prefixIcon: Icon(Iconsax.user_edit),
-                    ),
-                  ),
+              const TSignupForm(),
+              const SizedBox(height: TSizes.spaceBtwSections,),
 
-                  ///Email
-                  const SizedBox(height: TSizes.spaceBtwInputField,),
-                  TextFormField(
-                    decoration: const InputDecoration(
-                      labelText: TTexts.email,
-                      prefixIcon: Icon(Iconsax.direct),
-                    ),
-                  ),
+              ///Divider
+              FormDivider(dividerText: TTexts.orSignUpWith.capitalize!,),
+              const SizedBox(height: TSizes.spaceBtwSections,),
 
-                  ///Phone Number
-                  const SizedBox(height: TSizes.spaceBtwInputField,),
-                  TextFormField(
-                    decoration: const InputDecoration(
-                      labelText: TTexts.phoneNo,
-                      prefixIcon: Icon(Iconsax.call),
-                    ),
-                  ),
-
-                  ///Password
-                  const SizedBox(height: TSizes.spaceBtwInputField,),
-                  TextFormField(
-                    obscureText: true,
-                    decoration: const InputDecoration(
-                      labelText: TTexts.password,
-                      prefixIcon: Icon(Iconsax.password_check),
-                      suffixIcon: Icon(Iconsax.eye_slash),
-                    ),
-                  ),
-                  ///Terms & conditions
-                  ///Sign In Button
-                ],
-              ))
+              ///Social Buttons
+              const SocialButtons(),
             ],
           ),
         ),
@@ -103,3 +45,4 @@ class SignupScreen extends StatelessWidget {
     );
   }
 }
+
