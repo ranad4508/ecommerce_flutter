@@ -38,6 +38,7 @@ class TTexts{
   static const String termsOfUse = "Terms of use";
   static const String verificationCode = "verificationCode";
   static const String resendEmail = "Resend Email";
+  static const String done = "Done";
   static const String resendEmailIn = "Resend Email in";
 
   // Authentication Headings Text

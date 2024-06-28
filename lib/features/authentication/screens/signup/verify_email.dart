@@ -18,7 +18,7 @@ class VerifyEmailScreen extends StatelessWidget {
         automaticallyImplyLeading: false,
         actions: [
           IconButton(
-              onPressed: () => Get.offAll(() => LoginScreen()),
+              onPressed: () => Get.offAll(() => const LoginScreen()),
               icon: const Icon(CupertinoIcons.clear))
         ],
       ),
