@@ -22,4 +22,41 @@ static const String deliveredInPlaneIllustrations = "assets/images/animations/sa
 static const String deliveredEmailIllustrations = "assets/images/animations/sammy-service-support.gif";
 static const String verifyIllustrations = "assets/images/animations/sammy-line-no-connection.gif";
 
+// Categories images
+static const String computerIcon = "assets/images/categories/icons8-computer-100.png";
+static const String computerIcon1 = "assets/images/categories/icons8-computer-64.png";
+
+// Banner images
+static const String banner1 = "assets/images/banners/banner_1.jpg";
+static const String banner2 = "assets/images/banners/banner_2.jpg";
+static const String banner3 = "assets/images/banners/banner_3.jpg";
+
+//Product images
+static const String productImage1 = "assets/images/products/product-1.jpg";
+static const String productImage2 = "assets/images/products/product-2.jpeg";
+static const String productImage3 = "assets/images/products/product-3.jpeg";
+static const String productImage4 = "assets/images/products/product-4.jpeg";
+static const String productImage5 = "assets/images/products/product-5.jpg";
+static const String productImage6 = "assets/images/products/product-6.jpg";
+static const String productImage7 = "assets/images/products/product-7.jpg";
+
+static const String productImage8 = "assets/images/products/headphone-1.jpg";
+static const String productImage9 = "assets/images/products/headphone-2.jpg";
+static const String productImage10 = "assets/images/products/headphone-3.jpeg";
+
+static const String productImage11 = "assets/images/products/laptop-1.png";
+static const String productImage12 = "assets/images/products/laptop-2.jpg";
+static const String productImage13 = "assets/images/products/laptop-3.jpg";
+static const String productImage14 = "assets/images/products/laptop-4.jpeg";
+static const String productImage15 = "assets/images/products/laptop-5.png";
+static const String productImage16 = "assets/images/products/laptop-6.jpeg";
+
+static const String productImage17 = "assets/images/products/smartwatch-1.jpeg";
+static const String productImage18 = "assets/images/products/smartwatch-2.jpg";
+static const String productImage19 = "assets/images/products/smartwatch-3.jpg";
+static const String productImage20 = "assets/images/products/smartwatch-4.jpg";
+static const String productImage21 = "assets/images/products/smartwatch-5.jpg";
+static const String productImage22 = "assets/images/products/smartwatch-6.png";
+
+
 }

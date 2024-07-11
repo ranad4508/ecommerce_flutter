@@ -1,8 +1,16 @@
-import 'package:e_mall/common/widgets/custom_widgets/containers/circular_container.dart';
-import 'package:e_mall/common/widgets/custom_widgets/curved_edges/curved_edges_widget.dart';
+import 'package:e_mall/common/widgets/custom_shapes/containers/primary_header_container.dart';
+import 'package:e_mall/common/widgets/custom_shapes/containers/search_container.dart';
+import 'package:e_mall/common/widgets/layouts/grid_layout.dart';
+import 'package:e_mall/common/widgets/products/products_card/products_card_vertical.dart';
+import 'package:e_mall/common/widgets/texts/section_heading.dart';
+import 'package:e_mall/features/shop/screens/home/widgets/promo_slider.dart';
+import 'package:e_mall/features/shop/screens/home/widgets/home_categories.dart';
 import 'package:e_mall/utils/constants/colors.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:e_mall/utils/constants/image_strings.dart';
+import 'package:e_mall/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
+
+import 'widgets/home_appbar.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -13,8 +21,70 @@ class HomeScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            TPrimaryHeaderContainer(
-              child: Container(),
+            ///Header
+            const TPrimaryHeaderContainer(
+              child: Column(
+                children: [
+                  ///Appbar
+                  THomeAppBar(),
+                  SizedBox(
+                    height: TSizes.spaceBtwSections,
+                  ),
+
+                  ///Searchbar
+                  TSearchContainer(
+                    text: 'Search in Store',
+                  ),
+                  SizedBox(
+                    height: TSizes.spaceBtwSections,
+                  ),
+
+                  ///Categories
+                  Padding(
+                    padding: EdgeInsets.only(left: TSizes.defaultSpace),
+                    child: Column(
+                      children: [
+                        ///Heading
+                        TSectionHeading(
+                          title: 'Popular Categories',
+                          showActionButton: false,
+                          textColor: TColors.white,
+                        ),
+                        SizedBox(
+                          height: TSizes.spaceBtwItems,
+                        ),
+
+                        ///Categories
+                        THomeCategories(),
+                      ],
+                    ),
+                  )
+                ],
+              ),
+            ),
+
+            ///Body part
+            Padding(
+              padding: const EdgeInsets.all(TSizes.defaultSpace),
+              child: Column(
+                children: [
+                  // Promo slider
+                  const TPromoSlider(
+                    banners: [
+                      TImages.banner1,
+                      TImages.banner2,
+                      TImages.banner3
+                    ],
+                  ),
+                  const SizedBox(
+                    height: TSizes.spaceBtwSections,
+                  ),
+                  //   Popular Products
+                  TSectionHeading(title: "Popular Products", onPressed: (){},),
+                  const SizedBox(height: TSizes.spaceBtwItems,),
+                  GridLayout(itemCount: 4,itemBuilder: (_, index) => const TProductCardVertical(),),
+                ],
+              ),
             ),
           ],
         ),
@@ -23,42 +93,3 @@ class HomeScreen extends StatelessWidget {
   }
 }
 
-class TPrimaryHeaderContainer extends StatelessWidget {
-  const TPrimaryHeaderContainer({
-    super.key,
-    required this.child,
-  });
-
-  final Widget child;
-
-  @override
-  Widget build(BuildContext context) {
-    return TCurvedEdgesWidget(
-      child: Container(
-        color: TColors.primary,
-        padding: const EdgeInsets.all(0),
-        child: SizedBox(
-          height: 400,
-          child: Stack(
-            children: [
-              Positioned(
-                top: -150,
-                right: -250,
-                child: TCircularContainer(
-                  backgroundColor: TColors.textWhite.withOpacity(0.1),
-                ),
-              ),
-              Positioned(
-                top: 100,
-                right: -300,
-                child: TCircularContainer(
-                  backgroundColor: TColors.textWhite.withOpacity(0.1),
-                ),
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-}
