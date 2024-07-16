@@ -5,11 +5,13 @@ import 'package:e_mall/common/widgets/images/rounded_image.dart';
 import 'package:e_mall/common/widgets/texts/brand_title_with_verification.dart';
 import 'package:e_mall/common/widgets/texts/product_price.dart';
 import 'package:e_mall/common/widgets/texts/product_title_text.dart';
+import 'package:e_mall/features/shop/screens/product_details/product_detail.dart';
 import 'package:e_mall/utils/constants/colors.dart';
 import 'package:e_mall/utils/constants/image_strings.dart';
 import 'package:e_mall/utils/constants/sizes.dart';
 import 'package:e_mall/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
 
 class TProductCardVertical extends StatelessWidget {
@@ -19,7 +21,7 @@ class TProductCardVertical extends StatelessWidget {
   Widget build(BuildContext context) {
     final dark = THelperFunctions.isDarkMode(context);
     return GestureDetector(
-      onTap: () {},
+      onTap: () =>Get.to(()=> const ProductDetailScreen()),
       child: Container(
         width: 180,
         padding: const EdgeInsets.all(1),
@@ -52,7 +54,7 @@ class TProductCardVertical extends StatelessWidget {
 
                   /// Sale-tag positioned within the parent container
                   Positioned(
-                    top: 10,
+                    top: 12,
                     child: TRoundedContainer(
                       radius: TSizes.sm,
                       backgroundColor: TColors.secondary.withOpacity(0.8),
@@ -69,7 +71,7 @@ class TProductCardVertical extends StatelessWidget {
                   ),
 
                   /// Favourite Icon positioned within the parent container
-                  const Positioned(
+                  Positioned(
                     top: 0,
                     right: 0,
                     child: TCircularIcon(
