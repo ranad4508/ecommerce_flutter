@@ -2,6 +2,7 @@ import 'package:e_mall/common/styles/shadows.dart';
 import 'package:e_mall/common/widgets/custom_shapes/containers/rounded_container.dart';
 import 'package:e_mall/common/widgets/icon/circular_icon.dart';
 import 'package:e_mall/common/widgets/images/rounded_image.dart';
+import 'package:e_mall/common/widgets/texts/brand_title_with_verification.dart';
 import 'package:e_mall/common/widgets/texts/product_price.dart';
 import 'package:e_mall/common/widgets/texts/product_title_text.dart';
 import 'package:e_mall/utils/constants/colors.dart';
@@ -86,36 +87,19 @@ class TProductCardVertical extends StatelessWidget {
             ),
 
             ///Details
-            Padding(
-              padding: const EdgeInsets.only(left: TSizes.md),
+            const Padding(
+              padding: EdgeInsets.only(left: TSizes.md),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const ProductTitleText(
+                  ProductTitleText(
                     title: 'HP Victus 12',
                     smallSize: true,
                   ),
-                  const SizedBox(
+                  SizedBox(
                     height: TSizes.spaceBtwItems / 2,
                   ),
-                  Row(
-                    children: [
-                      Text(
-                        "HP",
-                        overflow: TextOverflow.ellipsis,
-                        maxLines: 1,
-                        style: Theme.of(context).textTheme.labelMedium,
-                      ),
-                      const SizedBox(
-                        width: TSizes.xs,
-                      ),
-                      const Icon(
-                        Iconsax.verify,
-                        color: TColors.primary,
-                        size: TSizes.iconXs,
-                      ),
-                    ],
-                  ),
+                  BrandTitleWithVerifiedIcon(title: 'HP'),
 
                 ],
               ),
@@ -157,4 +141,5 @@ class TProductCardVertical extends StatelessWidget {
     );
   }
 }
+
 

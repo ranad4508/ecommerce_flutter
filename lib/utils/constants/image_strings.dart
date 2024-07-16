@@ -31,6 +31,9 @@ static const String banner1 = "assets/images/banners/banner_1.jpg";
 static const String banner2 = "assets/images/banners/banner_2.jpg";
 static const String banner3 = "assets/images/banners/banner_3.jpg";
 
+// User Profile Image
+static const String user1 = "assets/images/user/user_icon.png";
+
 //Product images
 static const String productImage1 = "assets/images/products/product-1.jpg";
 static const String productImage2 = "assets/images/products/product-2.jpeg";
@@ -57,6 +60,9 @@ static const String productImage19 = "assets/images/products/smartwatch-3.jpg";
 static const String productImage20 = "assets/images/products/smartwatch-4.jpg";
 static const String productImage21 = "assets/images/products/smartwatch-5.jpg";
 static const String productImage22 = "assets/images/products/smartwatch-6.png";
+
+// Brands icons
+static const String brandIcon1 = "assets/images/brands/mobile-icon.png";
 
 
 }

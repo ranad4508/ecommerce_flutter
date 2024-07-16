@@ -7,11 +7,11 @@ class TCardCounterIcon extends StatelessWidget {
   const TCardCounterIcon({
     super.key,
     required this.onPressed,
-    required this.iconColor,
+    this.iconColor,
   });
 
   final VoidCallback onPressed;
-  final Color iconColor;
+  final Color? iconColor;
 
   @override
   Widget build(BuildContext context) {
