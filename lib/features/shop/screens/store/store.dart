@@ -17,7 +17,7 @@ class StoreScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 8,
+      length: 10,
       child: Scaffold(
         appBar: TAppBar(
           title: Text(
@@ -83,14 +83,16 @@ class StoreScreen extends StatelessWidget {
                 ///Tabs
                 bottom: const TTabBar(tabs: [
                   Tab(
-                    child: Text('Computers & Tablets'),
+                    child: Text('Desktops'),
+                  ),Tab(
+                    child: Text('Laptops'),
+                  ),Tab(
+                    child: Text('Monitors'),
                   ),
                   Tab(
-                    child: Text('Mobile Phones'),
+                    child: Text('Smartphones'),
                   ),
-                  Tab(
-                    child: Text('TV & Entertainment'),
-                  ),
+
                   Tab(
                     child: Text('Audio'),
                   ),
@@ -100,11 +102,14 @@ class StoreScreen extends StatelessWidget {
                   Tab(
                     child: Text('Gaming'),
                   ),
+
                   Tab(
-                    child: Text('Home Appliances'),
+                    child: Text('Watches & Accessories'),
+                  ),Tab(
+                    child: Text('Electronic Accessories'),
                   ),
                   Tab(
-                    child: Text('Smart Watches'),
+                    child: Text('TV & Home Appliances'),
                   ),
                 ]),
               ),
