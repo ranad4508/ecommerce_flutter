@@ -3,6 +3,7 @@ import 'package:e_mall/common/widgets/custom_shapes/containers/primary_header_co
 import 'package:e_mall/common/widgets/list_tile/settings_menu.dart';
 import 'package:e_mall/common/widgets/list_tile/user_profile_tile.dart';
 import 'package:e_mall/common/widgets/texts/section_heading.dart';
+import 'package:e_mall/features/personalization/screens/address/address.dart';
 import 'package:e_mall/features/personalization/screens/profile/profile.dart';
 import 'package:e_mall/utils/constants/colors.dart';
 import 'package:e_mall/utils/constants/sizes.dart';
@@ -61,7 +62,7 @@ class SettingsScreen extends StatelessWidget {
                     icon: Iconsax.safe_home_copy,
                     title: "My Addresses",
                     subTitle: "Set shipping delivery address",
-                    onTap: () {},
+                    onTap: ()=> Get.to(()=> UserAddressScreen()),
                   ),
                   TSettingsMenuTile(
                     icon: Iconsax.shopping_cart_copy,
