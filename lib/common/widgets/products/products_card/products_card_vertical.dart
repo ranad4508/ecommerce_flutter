@@ -71,7 +71,7 @@ class TProductCardVertical extends StatelessWidget {
                   ),
 
                   /// Favourite Icon positioned within the parent container
-                  Positioned(
+                  const Positioned(
                     top: 0,
                     right: 0,
                     child: TCircularIcon(

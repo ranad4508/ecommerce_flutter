@@ -30,45 +30,45 @@ class CheckoutScreen extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(TSizes.defaultSpace),
+          padding: const EdgeInsets.all(TSizes.defaultSpace),
           child: Column(
             children: [
               ///Items in cart
-              TCartItems(
+              const TCartItems(
                 showAddRemoveButtons: false,
               ),
-              SizedBox(
+              const SizedBox(
                 height: TSizes.spaceBtwSections,
               ),
 
               ///Coupon Field
-              TCouponCode(),
-              SizedBox(
+              const TCouponCode(),
+              const SizedBox(
                 height: TSizes.spaceBtwSections,
               ),
 
               ///Billing section
               TRoundedContainer(
-                padding: EdgeInsets.all(TSizes.md),
+                padding: const EdgeInsets.all(TSizes.md),
                 showBorder: true,
                 backgroundColor: dark ? TColors.black : TColors.white,
-                child: Column(
+                child: const Column(
                   children: [
                     ///Pricing
                     TBillingAmountSection(),
-                    const SizedBox(
+                    SizedBox(
                       height: TSizes.spaceBtwItems,
                     ),
 
                     ///Divider
                     Divider(),
-                    const SizedBox(
+                    SizedBox(
                       height: TSizes.spaceBtwItems,
                     ),
 
                     /// Payment Section
                     TBillingPaymentSection(),
-                    const SizedBox(
+                    SizedBox(
                       height: TSizes.spaceBtwItems,
                     ),
 
@@ -89,10 +89,10 @@ class CheckoutScreen extends StatelessWidget {
               image: TImages.successfullPaymentIcon,
               title: "Payment Success",
               subTitle: 'Your item will be shipped soon!',
-              onPressed: () => Get.offAll(() => NavigationMenu()),
+              onPressed: () => Get.offAll(() => const NavigationMenu()),
             ),
           ),
-          child: Text('Checkout \$699'),
+          child: const Text('Checkout \$699'),
         ),
       ),
     );

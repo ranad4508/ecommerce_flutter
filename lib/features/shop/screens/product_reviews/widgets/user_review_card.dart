@@ -20,10 +20,10 @@ class UserReviewCard extends StatelessWidget {
           children: [
             Row(
               children: [
-                CircleAvatar(
+                const CircleAvatar(
                   backgroundImage: AssetImage(TImages.user1),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: TSizes.spaceBtwItems,
                 ),
                 Text(
@@ -34,33 +34,33 @@ class UserReviewCard extends StatelessWidget {
             ),
             IconButton(
               onPressed: () {},
-              icon: Icon(Icons.more_vert),
+              icon: const Icon(Icons.more_vert),
             ),
           ],
         ),
-        SizedBox(height: TSizes.spaceBtwItems,),
+        const SizedBox(height: TSizes.spaceBtwItems,),
         ///Review
         Row(
-          children: [TRatingBarIndicator(rating: 4),
+          children: [const TRatingBarIndicator(rating: 4),
           const SizedBox(width: TSizes.spaceBtwItems,),
           Text('20 July, 2024', style: Theme.of(context).textTheme.bodyMedium,)
           ],
         ),
         const SizedBox(height: TSizes.spaceBtwItems,),
-        ReadMoreText('This is a application that have a awesome user interface. I was able to navigate where i want and make my shopping experience really awesome.',
+        const ReadMoreText('This is a application that have a awesome user interface. I was able to navigate where i want and make my shopping experience really awesome.',
           trimLines: 2,
           trimMode: TrimMode.Line,
           trimExpandedText: ' Show less',
           trimCollapsedText: ' Show More',
-          moreStyle: const TextStyle(fontSize: 14, fontWeight: FontWeight.bold, color: TColors.primary),
-          lessStyle: const TextStyle(fontSize: 14, fontWeight: FontWeight.bold, color: TColors.primary),
+          moreStyle: TextStyle(fontSize: 14, fontWeight: FontWeight.bold, color: TColors.primary),
+          lessStyle: TextStyle(fontSize: 14, fontWeight: FontWeight.bold, color: TColors.primary),
         ),
         const SizedBox(height: TSizes.spaceBtwItems,),
         ///Review
         TRoundedContainer(
           backgroundColor: dark?TColors.darkerGrey:TColors.grey,
           child: Padding(
-            padding: EdgeInsets.all(TSizes.md),
+            padding: const EdgeInsets.all(TSizes.md),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -72,13 +72,13 @@ class UserReviewCard extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(height: TSizes.spaceBtwItems,),
-                ReadMoreText('Thank you ma\'am for your precious review.',
+                const ReadMoreText('Thank you ma\'am for your precious review.',
                   trimLines: 2,
                   trimMode: TrimMode.Line,
                   trimExpandedText: ' Show less',
                   trimCollapsedText: ' Show More',
-                  moreStyle: const TextStyle(fontSize: 14, fontWeight: FontWeight.bold, color: TColors.primary),
-                  lessStyle: const TextStyle(fontSize: 14, fontWeight: FontWeight.bold, color: TColors.primary),
+                  moreStyle: TextStyle(fontSize: 14, fontWeight: FontWeight.bold, color: TColors.primary),
+                  lessStyle: TextStyle(fontSize: 14, fontWeight: FontWeight.bold, color: TColors.primary),
                 ),
               ],
             ),

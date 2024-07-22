@@ -14,7 +14,7 @@ class TSingleAddress extends StatelessWidget {
   Widget build(BuildContext context) {
     final dark = THelperFunctions.isDarkMode(context);
     return TRoundedContainer(
-      padding: EdgeInsets.all( TSizes.md),
+      padding: const EdgeInsets.all( TSizes.md),
       width: double.infinity,
       showBorder: true,
       backgroundColor: selectedAddress
@@ -25,7 +25,7 @@ class TSingleAddress extends StatelessWidget {
           : dark
           ? TColors.darkerGrey
           : TColors.grey,
-      margin: EdgeInsets.only(bottom: TSizes.spaceBtwItems),
+      margin: const EdgeInsets.only(bottom: TSizes.spaceBtwItems),
       child: SizedBox(
         width: double.infinity,
         child: Stack(

@@ -51,7 +51,7 @@ class TProductMetaData extends StatelessWidget {
             const SizedBox(
               width: TSizes.spaceBtwItems,
             ),
-            ProductCardPrice(
+            const ProductCardPrice(
               price: '690',
               isLarge: true,
             ),
@@ -62,7 +62,7 @@ class TProductMetaData extends StatelessWidget {
         ),
 
         ///Title
-        ProductTitleText(title: 'HP Victus 12'),
+        const ProductTitleText(title: 'HP Victus 12'),
         const SizedBox(
           height: TSizes.spaceBtwItems / 1.5,
         ),
@@ -70,7 +70,7 @@ class TProductMetaData extends StatelessWidget {
         ///Stock Status
         Row(
           children: [
-            ProductTitleText(title: 'Status'),
+            const ProductTitleText(title: 'Status'),
             const SizedBox(
               width: TSizes.spaceBtwItems,
             ),
@@ -93,7 +93,7 @@ class TProductMetaData extends StatelessWidget {
               height: 32,
               overlayColor: darkMode ? TColors.white : TColors.black,
             ),
-            BrandTitleWithVerifiedIcon(
+            const BrandTitleWithVerifiedIcon(
               title: 'HP',
               brandTextSize: TextSizes.medium,
             ),

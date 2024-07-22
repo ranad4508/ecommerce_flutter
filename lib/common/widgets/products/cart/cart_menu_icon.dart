@@ -20,7 +20,7 @@ class TCardCounterIcon extends StatelessWidget {
     return Stack(
       children: [
         IconButton(
-          onPressed: ()=>Get.to(()=> CartScreen()),
+          onPressed: ()=>Get.to(()=> const CartScreen()),
           icon: const Icon(Iconsax.shopping_bag_copy),
           color: iconColor,
         ),

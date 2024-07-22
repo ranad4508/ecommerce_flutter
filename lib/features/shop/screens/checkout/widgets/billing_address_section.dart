@@ -19,17 +19,17 @@ class TBillingAddressSection extends StatelessWidget {
           'Roshni Koirala',
           style: Theme.of(context).textTheme.bodyLarge,
         ),
-        SizedBox(
+        const SizedBox(
           width: TSizes.spaceBtwItems/2,
         ),
         Row(
           children: [
-            Icon(
+            const Icon(
               Icons.phone,
               color: Colors.grey,
               size: 16,
             ),
-            SizedBox(
+            const SizedBox(
               width: TSizes.spaceBtwItems,
             ),
             Text(
@@ -38,17 +38,17 @@ class TBillingAddressSection extends StatelessWidget {
             )
           ],
         ),
-        SizedBox(
+        const SizedBox(
           height: TSizes.spaceBtwSections / 2,
         ),
         Row(
           children: [
-            Icon(
+            const Icon(
               Icons.location_history,
               color: Colors.grey,
               size: 16,
             ),
-            SizedBox(
+            const SizedBox(
               width: TSizes.spaceBtwItems,
             ),
             Expanded(

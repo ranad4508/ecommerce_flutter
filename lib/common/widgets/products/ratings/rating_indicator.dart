@@ -1,6 +1,5 @@
 import 'package:e_mall/utils/constants/colors.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
 class TRatingBarIndicator extends StatelessWidget {
@@ -15,7 +14,7 @@ class TRatingBarIndicator extends StatelessWidget {
       rating: rating,
       itemSize: 20,
       unratedColor: TColors.grey,
-      itemBuilder: (_, __) => Icon(
+      itemBuilder: (_, __) => const Icon(
         CupertinoIcons.star_fill,
         color: CupertinoColors.systemYellow,
       ),

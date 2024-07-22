@@ -23,11 +23,11 @@ class TProductImageSlider extends StatelessWidget {
         child: Stack(
           children: [
             ///Main large image
-            SizedBox(
+            const SizedBox(
               height: 400,
               child: Padding(
                 padding:
-                const EdgeInsets.all(TSizes.productItemRadius * 2),
+                EdgeInsets.all(TSizes.productItemRadius * 2),
                 child: Center(
                   child: Image(
                     image: AssetImage(TImages.productImage11),
@@ -48,7 +48,7 @@ class TProductImageSlider extends StatelessWidget {
                     width: TSizes.spaceBtwItems,
                   ),
                   itemCount: 6,
-                  physics: AlwaysScrollableScrollPhysics(),
+                  physics: const AlwaysScrollableScrollPhysics(),
                   shrinkWrap: true,
                   scrollDirection: Axis.horizontal,
                   itemBuilder: (_, index) => TRoundedImage(
@@ -57,14 +57,14 @@ class TProductImageSlider extends StatelessWidget {
                     backgroundColor:
                     dark ? TColors.dark : TColors.white,
                     border: Border.all(color: TColors.primary),
-                    padding: EdgeInsets.all(TSizes.sm),
+                    padding: const EdgeInsets.all(TSizes.sm),
                   ),
                 ),
               ),
             ),
 
             ///Appbar Icons
-            TAppBar(
+            const TAppBar(
               showBackArrow: true,
               actions: [
                 TCircularIcon(

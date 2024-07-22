@@ -1,7 +1,3 @@
-import 'package:e_mall/common/widgets/appbar/appbar.dart';
-import 'package:e_mall/common/widgets/custom_shapes/curved_edges/curved_edges_widget.dart';
-import 'package:e_mall/common/widgets/icon/circular_icon.dart';
-import 'package:e_mall/common/widgets/images/rounded_image.dart';
 import 'package:e_mall/common/widgets/texts/section_heading.dart';
 import 'package:e_mall/features/shop/screens/product_details/widgets/bottom_add_to_cart.dart';
 import 'package:e_mall/features/shop/screens/product_details/widgets/product_attributes.dart';
@@ -9,8 +5,6 @@ import 'package:e_mall/features/shop/screens/product_details/widgets/product_det
 import 'package:e_mall/features/shop/screens/product_details/widgets/product_meta_data.dart';
 import 'package:e_mall/features/shop/screens/product_details/widgets/rating_share_widget.dart';
 import 'package:e_mall/features/shop/screens/product_reviews/product_reviews.dart';
-import 'package:e_mall/utils/constants/colors.dart';
-import 'package:e_mall/utils/constants/image_strings.dart';
 import 'package:e_mall/utils/constants/sizes.dart';
 import 'package:e_mall/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
@@ -25,30 +19,30 @@ class ProductDetailScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final dark = THelperFunctions.isDarkMode(context);
     return Scaffold(
-      bottomNavigationBar: TBottomAddToCart(),
+      bottomNavigationBar: const TBottomAddToCart(),
       body: SingleChildScrollView(
         child: Column(
           children: [
             ///Product Image slider
-            TProductImageSlider(),
+            const TProductImageSlider(),
 
             /// Product Details
             Padding(
-              padding: EdgeInsets.only(
+              padding: const EdgeInsets.only(
                   right: TSizes.defaultSpace,
                   left: TSizes.defaultSpace,
                   bottom: TSizes.defaultSpace),
               child: Column(
                 children: [
                   ///Rating & share
-                  TRatingAndShare(),
+                  const TRatingAndShare(),
 
                   ///Price, Title, Stock & Brand
-                  TProductMetaData(),
+                  const TProductMetaData(),
 
                   ///Attribute
-                  ProductAttributes(),
-                  SizedBox(
+                  const ProductAttributes(),
+                  const SizedBox(
                     height: TSizes.spaceBtwSections,
                   ),
 
@@ -57,22 +51,22 @@ class ProductDetailScreen extends StatelessWidget {
                     width: double.infinity,
                     child: ElevatedButton(
                       onPressed: () {},
-                      child: Text('Checkout'),
+                      child: const Text('Checkout'),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: TSizes.spaceBtwSections,
                   ),
 
                   ///Description
-                  TSectionHeading(
+                  const TSectionHeading(
                     title: 'Description',
                     showActionButton: false,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: TSizes.spaceBtwItems,
                   ),
-                  ReadMoreText(
+                  const ReadMoreText(
                     '13th Generation Intel® Core™ i7 processor Windows 11 Home 39.6 cm (15.6) diagonal,'
                     ' FHD, 144 Hz refresh rate, 9 ms response time display'
                     ' NVIDIA® GeForce RTX™ 4050 6GB 16 GB DDR4 RAM 1TB SSD'
@@ -90,26 +84,26 @@ class ProductDetailScreen extends StatelessWidget {
 
                   ///Reviews
                   const Divider(),
-                  SizedBox(
+                  const SizedBox(
                     height: TSizes.spaceBtwItems,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      TSectionHeading(
+                      const TSectionHeading(
                         title: 'Reviews(29)',
                         showActionButton: false,
                       ),
                       IconButton(
-                          icon: Icon(
+                          icon: const Icon(
                             Iconsax.arrow_right_3_copy,
                             size: 18,
                           ),
                           onPressed: () =>
-                              Get.to(() => ProductReviewsScreen())),
+                              Get.to(() => const ProductReviewsScreen())),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: TSizes.spaceBtwSections,
                   ),
                 ],

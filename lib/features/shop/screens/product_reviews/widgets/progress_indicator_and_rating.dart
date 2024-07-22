@@ -31,7 +31,7 @@ class TRatingProgressIndicator extends StatelessWidget {
               value: value,
               minHeight: 11,
               backgroundColor: TColors.grey,
-              valueColor: AlwaysStoppedAnimation(CupertinoColors.systemYellow),
+              valueColor: const AlwaysStoppedAnimation(CupertinoColors.systemYellow),
               borderRadius: BorderRadius.circular(7),
             ),
           ),

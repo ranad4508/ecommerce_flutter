@@ -5,6 +5,7 @@ import 'package:e_mall/common/widgets/list_tile/user_profile_tile.dart';
 import 'package:e_mall/common/widgets/texts/section_heading.dart';
 import 'package:e_mall/features/personalization/screens/address/address.dart';
 import 'package:e_mall/features/personalization/screens/profile/profile.dart';
+import 'package:e_mall/features/shop/screens/order/order.dart';
 import 'package:e_mall/utils/constants/colors.dart';
 import 'package:e_mall/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
@@ -62,7 +63,7 @@ class SettingsScreen extends StatelessWidget {
                     icon: Iconsax.safe_home_copy,
                     title: "My Addresses",
                     subTitle: "Set shipping delivery address",
-                    onTap: ()=> Get.to(()=> UserAddressScreen()),
+                    onTap: ()=> Get.to(()=> const UserAddressScreen()),
                   ),
                   TSettingsMenuTile(
                     icon: Iconsax.shopping_cart_copy,
@@ -74,7 +75,7 @@ class SettingsScreen extends StatelessWidget {
                     icon: Iconsax.bag_tick_copy,
                     title: "My Orders",
                     subTitle: "In-progress and completed orders",
-                    onTap: () {},
+                    onTap: () =>Get.to(()=> const OrderScreen()),
                   ),
                   TSettingsMenuTile(
                     icon: Iconsax.discount_shape_copy,

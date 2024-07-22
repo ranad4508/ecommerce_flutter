@@ -17,15 +17,15 @@ class TCartItem extends StatelessWidget {
     return Row(
       children: [
         TRoundedImage(
-          imageUrl: TImages.productImage5,
+          imageUrl: TImages.productImage11,
           width: 60,
           height: 60,
-          padding: EdgeInsets.all(TSizes.sm),
+          padding: const EdgeInsets.all(TSizes.sm),
           backgroundColor: THelperFunctions.isDarkMode(context)
               ? TColors.darkerGrey
               : TColors.light,
         ),
-        SizedBox(
+        const SizedBox(
           width: TSizes.spaceBtwItems,
         ),
 
@@ -35,8 +35,8 @@ class TCartItem extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              BrandTitleWithVerifiedIcon(title: 'HP'),
-              Flexible(
+              const BrandTitleWithVerifiedIcon(title: 'HP'),
+              const Flexible(
                 child: ProductTitleText(
                   title: 'HP Victus 12',
                   maxLines: 1,

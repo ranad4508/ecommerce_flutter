@@ -31,7 +31,7 @@ class TProductQuantityWithAddRemove extends StatelessWidget {
         const SizedBox(width: TSizes.spaceBtwItems,),
         Text('2', style: Theme.of(context).textTheme.titleSmall,),
         const SizedBox(width: TSizes.spaceBtwItems,),
-        TCircularIcon(
+        const TCircularIcon(
           icon: Iconsax.add_copy,
           width: 32,
           height: 32,
