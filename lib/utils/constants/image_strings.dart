@@ -64,5 +64,11 @@ static const String productImage22 = "assets/images/products/smartwatch-6.png";
 // Brands icons
 static const String brandIcon1 = "assets/images/brands/mobile-icon.png";
 
+//payment methods
+static const String paypal = "assets/images/payment_methods/paypal.png";
+static const String esewa = "assets/images/payment_methods/esewa.png";
+
+//Success screen
+static const String successfullPaymentIcon = "assets/images/success_screen/success_icon.png";
 
 }

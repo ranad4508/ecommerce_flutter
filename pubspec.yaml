@@ -50,3 +50,5 @@ flutter:
     - assets/images/products/
     - assets/images/brands/
     - assets/images/user/
+    - assets/images/payment_methods/
+    - assets/images/success_screen/
