@@ -54,7 +54,7 @@ class TProductCardVertical extends StatelessWidget {
 
                   /// Sale-tag positioned within the parent container
                   Positioned(
-                    top: 12,
+                    top: 0,
                     child: TRoundedContainer(
                       radius: TSizes.sm,
                       backgroundColor: TColors.secondary.withOpacity(0.8),
@@ -72,8 +72,8 @@ class TProductCardVertical extends StatelessWidget {
 
                   /// Favourite Icon positioned within the parent container
                   const Positioned(
-                    top: 0,
-                    right: 0,
+                    top: -12,
+                    right: -10,
                     child: TCircularIcon(
                       icon: Iconsax.heart,
                       color: Colors.red,

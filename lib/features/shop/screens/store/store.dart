@@ -5,11 +5,13 @@ import 'package:e_mall/common/widgets/layouts/grid_layout.dart';
 import 'package:e_mall/common/widgets/products/cart/cart_menu_icon.dart';
 import 'package:e_mall/common/widgets/brands/brand_card.dart';
 import 'package:e_mall/common/widgets/texts/section_heading.dart';
+import 'package:e_mall/features/shop/screens/brand/all_brands.dart';
 import 'package:e_mall/features/shop/screens/store/widgets/category_tab.dart';
 import 'package:e_mall/utils/constants/colors.dart';
 import 'package:e_mall/utils/constants/sizes.dart';
 import 'package:e_mall/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class StoreScreen extends StatelessWidget {
   const StoreScreen({super.key});
@@ -62,15 +64,15 @@ class StoreScreen extends StatelessWidget {
                       TSectionHeading(
                         title: 'Featured Brands',
                         showActionButton: true,
-                        onPressed: () {},
+                        onPressed: ()=>Get.to(()=>AllBrandsScreen()),
                       ),
                       const SizedBox(
                         height: TSizes.spaceBtwItems / 1.5,
                       ),
 
-                      GridLayout(
+                      TGridLayout(
                           itemCount: 4,
-                          mainAxisEvent: 80,
+                          mainAxisExtent: 80,
                           itemBuilder: (_, index) {
                             return const TBrandCard(
                               showBorder: true,

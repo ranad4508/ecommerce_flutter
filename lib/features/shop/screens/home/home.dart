@@ -3,12 +3,14 @@ import 'package:e_mall/common/widgets/custom_shapes/containers/search_container.
 import 'package:e_mall/common/widgets/layouts/grid_layout.dart';
 import 'package:e_mall/common/widgets/products/products_card/products_card_vertical.dart';
 import 'package:e_mall/common/widgets/texts/section_heading.dart';
+import 'package:e_mall/features/shop/screens/all_products/all_products.dart';
 import 'package:e_mall/features/shop/screens/home/widgets/promo_slider.dart';
 import 'package:e_mall/features/shop/screens/home/widgets/home_categories.dart';
 import 'package:e_mall/utils/constants/colors.dart';
 import 'package:e_mall/utils/constants/image_strings.dart';
 import 'package:e_mall/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import 'widgets/home_appbar.dart';
 
@@ -81,9 +83,9 @@ class HomeScreen extends StatelessWidget {
                     height: TSizes.spaceBtwSections,
                   ),
                   //   Popular Products
-                  TSectionHeading(title: "Popular Products", onPressed: (){},),
+                  TSectionHeading(title: "Popular Products", onPressed: ()=>Get.to(()=>AllProducts()),),
                   const SizedBox(height: TSizes.spaceBtwItems,),
-                  GridLayout(itemCount: 4,itemBuilder: (_, index) => const TProductCardVertical(),),
+                  TGridLayout(itemCount: 4,itemBuilder: (_, index) => const TProductCardVertical(),),
                 ],
               ),
             ),
