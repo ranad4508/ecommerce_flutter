@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyAiQ4LtGs6H7RGndXmskN_9-GRfCRPd5l0</string>
+	<key>GCM_SENDER_ID</key>
+	<string>917796398591</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.riderApp</string>
+	<key>PROJECT_ID</key>
+	<string>ecommerce-2024-7c6ac</string>
+	<key>STORAGE_BUCKET</key>
+	<string>ecommerce-2024-7c6ac.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:917796398591:ios:f9e7d7da8ee96ce42133ca</string>
+</dict>
+</plist>
