@@ -14,7 +14,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   DocumentReference? userRef;
-  String fullname = 'Olivette Admin';
+  String fullname = 'Emall Admin';
   String profilePic =
       'https://eitrawmaterials.eu/wp-content/uploads/2016/09/person-icon.png';
   String email = 'admin123@gmail.com';

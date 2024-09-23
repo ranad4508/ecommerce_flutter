@@ -120,6 +120,8 @@ class _ProductsByCatHomePageWidgetState
                           fontSize: MediaQuery.of(context).size.width >= 1100
                               ? 30
                               : 20),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
                     ).tr(),
                   ),
 
@@ -155,7 +157,10 @@ class _ProductsByCatHomePageWidgetState
                           'See All',
                           style: TextStyle(
                               fontWeight: FontWeight.bold,
-                              color: AdaptiveTheme.of(context).mode.isDark == true?Colors.white: Colors.black,
+                              color:
+                                  AdaptiveTheme.of(context).mode.isDark == true
+                                      ? Colors.white
+                                      : Colors.black,
                               fontSize:
                                   MediaQuery.of(context).size.width >= 1100
                                       ? 15
@@ -211,117 +216,121 @@ class _ProductsByCatHomePageWidgetState
           ),
         ),
         // if (MediaQuery.of(context).size.width >= 1100)
-          Padding(
-            padding: MediaQuery.of(context).size.width >= 1100
-                ? const EdgeInsets.only(left: 50, right: 50)
-                : const EdgeInsets.all(0),
-            child: Column(
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Text(
-                        cat2,
-                        style: TextStyle(
-                            // color: Colors.white,
-                            fontFamily: 'LilitaOne',
-                            // fontWeight: FontWeight.bold,
-                            fontSize:
-                                MediaQuery.of(context).size.width >= 1100
-                                    ? 30
-                                    : 20),
-                      ).tr(),
-                    ),
+        Padding(
+          padding: MediaQuery.of(context).size.width >= 1100
+              ? const EdgeInsets.only(left: 50, right: 50)
+              : const EdgeInsets.all(0),
+          child: Column(
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(
+                      cat2,
+                      style: TextStyle(
+                          // color: Colors.white,
+                          fontFamily: 'LilitaOne',
+                          // fontWeight: FontWeight.bold,
+                          fontSize: MediaQuery.of(context).size.width >= 1100
+                              ? 30
+                              : 20),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                    ).tr(),
+                  ),
 
-                    // Padding(
-                    //   padding: const EdgeInsets.all(8.0),
-                    //   child: CountdownTimer(
-                    //     textStyle: TextStyle(
-                    //         fontWeight: FontWeight.bold,
-                    //         fontSize: MediaQuery.of(context).size.width >= 1100
-                    //             ? 18
-                    //             : 15),
-                    //     endTime:
-                    //         DateTime.parse(flashSales).millisecondsSinceEpoch,
-                    //     onEnd: () {
-                    //       // FirebaseFirestore.instance
-                    //       //     .collection('Flash Sales Products')
-                    //       //     .doc(productModel.uid)
-                    //       //     .delete();
-                    //       deleteAllDocumentsInCollection('Flash Sales');
-                    //     },
-                    //   ),
-                    // ),
-                    Padding(
-                      padding: MediaQuery.of(context).size.width >= 1100
-                          ? const EdgeInsets.all(0)
-                          : const EdgeInsets.all(8.0),
-                      child: Center(
-                        child: OutlinedButton(
-                          onPressed: () {
-                            context.push('/products/$cat2');
-                          },
-                          child: Text(
-                            'See All',
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                color: AdaptiveTheme.of(context).mode.isDark == true?Colors.white: Colors.black,
-                                fontSize:
-                                    MediaQuery.of(context).size.width >= 1100
-                                        ? 15
-                                        : 12),
-                          ).tr(),
-                        ),
+                  // Padding(
+                  //   padding: const EdgeInsets.all(8.0),
+                  //   child: CountdownTimer(
+                  //     textStyle: TextStyle(
+                  //         fontWeight: FontWeight.bold,
+                  //         fontSize: MediaQuery.of(context).size.width >= 1100
+                  //             ? 18
+                  //             : 15),
+                  //     endTime:
+                  //         DateTime.parse(flashSales).millisecondsSinceEpoch,
+                  //     onEnd: () {
+                  //       // FirebaseFirestore.instance
+                  //       //     .collection('Flash Sales Products')
+                  //       //     .doc(productModel.uid)
+                  //       //     .delete();
+                  //       deleteAllDocumentsInCollection('Flash Sales');
+                  //     },
+                  //   ),
+                  // ),
+                  Padding(
+                    padding: MediaQuery.of(context).size.width >= 1100
+                        ? const EdgeInsets.all(0)
+                        : const EdgeInsets.all(8.0),
+                    child: Center(
+                      child: OutlinedButton(
+                        onPressed: () {
+                          context.push('/products/$cat2');
+                        },
+                        child: Text(
+                          'See All',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color:
+                                  AdaptiveTheme.of(context).mode.isDark == true
+                                      ? Colors.white
+                                      : Colors.black,
+                              fontSize:
+                                  MediaQuery.of(context).size.width >= 1100
+                                      ? 15
+                                      : 12),
+                        ).tr(),
                       ),
                     ),
-                  ],
-                ),
-                loaded == true
-                    ? Card(
-                        semanticContainer: false,
-                        shape: const Border.fromBorderSide(BorderSide.none),
-                        color: MediaQuery.of(context).size.width >= 1100
-                            ? Colors.white
-                            : null,
-                        elevation: MediaQuery.of(context).size.width >= 1100
-                            ? 0.5
-                            : null,
-                        child: SizedBox(
-                          height: 200,
-                          //   width: double.infinity,
-                          child: ListView.builder(
-                            shrinkWrap: true,
-                            scrollDirection: Axis.horizontal,
-                            itemCount: 10,
-                            itemBuilder: (context, index) {
-                              return Shimmer.fromColors(
-                                baseColor: Colors.grey[300]!,
-                                highlightColor: Colors.grey[100]!,
-                                child: Container(
-                                  width: 170.0,
-                                  height: double.infinity,
-                                  margin: const EdgeInsets.all(8.0),
-                                  decoration: BoxDecoration(
-                                    color: Colors.white,
-                                    borderRadius: BorderRadius.circular(8.0),
-                                  ),
+                  ),
+                ],
+              ),
+              loaded == true
+                  ? Card(
+                      semanticContainer: false,
+                      shape: const Border.fromBorderSide(BorderSide.none),
+                      color: MediaQuery.of(context).size.width >= 1100
+                          ? Colors.white
+                          : null,
+                      elevation: MediaQuery.of(context).size.width >= 1100
+                          ? 0.5
+                          : null,
+                      child: SizedBox(
+                        height: 200,
+                        //   width: double.infinity,
+                        child: ListView.builder(
+                          shrinkWrap: true,
+                          scrollDirection: Axis.horizontal,
+                          itemCount: 10,
+                          itemBuilder: (context, index) {
+                            return Shimmer.fromColors(
+                              baseColor: Colors.grey[300]!,
+                              highlightColor: Colors.grey[100]!,
+                              child: Container(
+                                width: 170.0,
+                                height: double.infinity,
+                                margin: const EdgeInsets.all(8.0),
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(8.0),
                                 ),
-                              );
-                            },
-                          ),
+                              ),
+                            );
+                          },
                         ),
-                      )
-                    : SizedBox(
-                        height: 330,
-                        width: double.infinity,
-                        child: ProductsByCatWidget(
-                          cat: cat2,
-                        ))
-              ],
-            ),
+                      ),
+                    )
+                  : SizedBox(
+                      height: 330,
+                      width: double.infinity,
+                      child: ProductsByCatWidget(
+                        cat: cat2,
+                      ))
+            ],
           ),
+        ),
         const Gap(20),
         Padding(
             padding: MediaQuery.of(context).size.width >= 1100
@@ -351,6 +360,8 @@ class _ProductsByCatHomePageWidgetState
                           fontSize: MediaQuery.of(context).size.width >= 1100
                               ? 30
                               : 20),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
                     ).tr(),
                   ),
 
@@ -386,7 +397,10 @@ class _ProductsByCatHomePageWidgetState
                           'See All',
                           style: TextStyle(
                               fontWeight: FontWeight.bold,
-                              color:AdaptiveTheme.of(context).mode.isDark == true?Colors.white: Colors.black,
+                              color:
+                                  AdaptiveTheme.of(context).mode.isDark == true
+                                      ? Colors.white
+                                      : Colors.black,
                               fontSize:
                                   MediaQuery.of(context).size.width >= 1100
                                       ? 15
@@ -442,229 +456,237 @@ class _ProductsByCatHomePageWidgetState
           ),
         ),
         // if (MediaQuery.of(context).size.width >= 1100)
-          Padding(
-            padding: MediaQuery.of(context).size.width >= 1100
-                ? const EdgeInsets.only(left: 50, right: 50)
-                : const EdgeInsets.all(0),
-            child: Column(
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Text(
-                        cat4,
-                        style: TextStyle(
-                            // color: Colors.white,
-                            fontFamily: 'LilitaOne',
-                            // fontWeight: FontWeight.bold,
-                            fontSize:
-                                MediaQuery.of(context).size.width >= 1100
-                                    ? 30
-                                    : 20),
-                      ).tr(),
-                    ),
+        Padding(
+          padding: MediaQuery.of(context).size.width >= 1100
+              ? const EdgeInsets.only(left: 50, right: 50)
+              : const EdgeInsets.all(0),
+          child: Column(
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(
+                      cat4,
+                      style: TextStyle(
+                          // color: Colors.white,
+                          fontFamily: 'LilitaOne',
+                          // fontWeight: FontWeight.bold,
+                          fontSize: MediaQuery.of(context).size.width >= 1100
+                              ? 30
+                              : 20),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                    ).tr(),
+                  ),
 
-                    // Padding(
-                    //   padding: const EdgeInsets.all(8.0),
-                    //   child: CountdownTimer(
-                    //     textStyle: TextStyle(
-                    //         fontWeight: FontWeight.bold,
-                    //         fontSize: MediaQuery.of(context).size.width >= 1100
-                    //             ? 18
-                    //             : 15),
-                    //     endTime:
-                    //         DateTime.parse(flashSales).millisecondsSinceEpoch,
-                    //     onEnd: () {
-                    //       // FirebaseFirestore.instance
-                    //       //     .collection('Flash Sales Products')
-                    //       //     .doc(productModel.uid)
-                    //       //     .delete();
-                    //       deleteAllDocumentsInCollection('Flash Sales');
-                    //     },
-                    //   ),
-                    // ),
-                    Padding(
-                      padding: MediaQuery.of(context).size.width >= 1100
-                          ? const EdgeInsets.all(0)
-                          : const EdgeInsets.all(8.0),
-                      child: Center(
-                        child: OutlinedButton(
-                          onPressed: () {
-                            context.push('/products/$cat4');
-                          },
-                          child: Text(
-                            'See All',
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                color: AdaptiveTheme.of(context).mode.isDark == true?Colors.white: Colors.black,
-                                fontSize:
-                                    MediaQuery.of(context).size.width >= 1100
-                                        ? 15
-                                        : 12),
-                          ).tr(),
-                        ),
+                  // Padding(
+                  //   padding: const EdgeInsets.all(8.0),
+                  //   child: CountdownTimer(
+                  //     textStyle: TextStyle(
+                  //         fontWeight: FontWeight.bold,
+                  //         fontSize: MediaQuery.of(context).size.width >= 1100
+                  //             ? 18
+                  //             : 15),
+                  //     endTime:
+                  //         DateTime.parse(flashSales).millisecondsSinceEpoch,
+                  //     onEnd: () {
+                  //       // FirebaseFirestore.instance
+                  //       //     .collection('Flash Sales Products')
+                  //       //     .doc(productModel.uid)
+                  //       //     .delete();
+                  //       deleteAllDocumentsInCollection('Flash Sales');
+                  //     },
+                  //   ),
+                  // ),
+                  Padding(
+                    padding: MediaQuery.of(context).size.width >= 1100
+                        ? const EdgeInsets.all(0)
+                        : const EdgeInsets.all(8.0),
+                    child: Center(
+                      child: OutlinedButton(
+                        onPressed: () {
+                          context.push('/products/$cat4');
+                        },
+                        child: Text(
+                          'See All',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color:
+                                  AdaptiveTheme.of(context).mode.isDark == true
+                                      ? Colors.white
+                                      : Colors.black,
+                              fontSize:
+                                  MediaQuery.of(context).size.width >= 1100
+                                      ? 15
+                                      : 12),
+                        ).tr(),
                       ),
                     ),
-                  ],
-                ),
-                loaded == true
-                    ? Card(
-                        semanticContainer: false,
-                        shape: const Border.fromBorderSide(BorderSide.none),
-                        color: MediaQuery.of(context).size.width >= 1100
-                            ? Colors.white
-                            : null,
-                        elevation: MediaQuery.of(context).size.width >= 1100
-                            ? 0.5
-                            : null,
-                        child: SizedBox(
-                          height: 200,
-                          //   width: double.infinity,
-                          child: ListView.builder(
-                            shrinkWrap: true,
-                            scrollDirection: Axis.horizontal,
-                            itemCount: 10,
-                            itemBuilder: (context, index) {
-                              return Shimmer.fromColors(
-                                baseColor: Colors.grey[300]!,
-                                highlightColor: Colors.grey[100]!,
-                                child: Container(
-                                  width: 170.0,
-                                  height: double.infinity,
-                                  margin: const EdgeInsets.all(8.0),
-                                  decoration: BoxDecoration(
-                                    color: Colors.white,
-                                    borderRadius: BorderRadius.circular(8.0),
-                                  ),
+                  ),
+                ],
+              ),
+              loaded == true
+                  ? Card(
+                      semanticContainer: false,
+                      shape: const Border.fromBorderSide(BorderSide.none),
+                      color: MediaQuery.of(context).size.width >= 1100
+                          ? Colors.white
+                          : null,
+                      elevation: MediaQuery.of(context).size.width >= 1100
+                          ? 0.5
+                          : null,
+                      child: SizedBox(
+                        height: 200,
+                        //   width: double.infinity,
+                        child: ListView.builder(
+                          shrinkWrap: true,
+                          scrollDirection: Axis.horizontal,
+                          itemCount: 10,
+                          itemBuilder: (context, index) {
+                            return Shimmer.fromColors(
+                              baseColor: Colors.grey[300]!,
+                              highlightColor: Colors.grey[100]!,
+                              child: Container(
+                                width: 170.0,
+                                height: double.infinity,
+                                margin: const EdgeInsets.all(8.0),
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(8.0),
                                 ),
-                              );
-                            },
-                          ),
+                              ),
+                            );
+                          },
                         ),
-                      )
-                    : SizedBox(
-                        height: 330,
-                        width: double.infinity,
-                        child: ProductsByCatWidget(
-                          cat: cat4,
-                        ))
-              ],
-            ),
+                      ),
+                    )
+                  : SizedBox(
+                      height: 330,
+                      width: double.infinity,
+                      child: ProductsByCatWidget(
+                        cat: cat4,
+                      ))
+            ],
           ),
+        ),
         // if (MediaQuery.of(context).size.width >= 1100)
-          Padding(
-            padding: MediaQuery.of(context).size.width >= 1100
-                ? const EdgeInsets.only(left: 50, right: 50)
-                : const EdgeInsets.all(0),
-            child: Column(
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Text(
-                        cat5,
-                        style: TextStyle(
-                            // color: Colors.white,
-                            fontFamily: 'LilitaOne',
-                            // fontWeight: FontWeight.bold,
-                            fontSize:
-                                MediaQuery.of(context).size.width >= 1100
-                                    ? 30
-                                    : 20),
-                      ).tr(),
-                    ),
+        Padding(
+          padding: MediaQuery.of(context).size.width >= 1100
+              ? const EdgeInsets.only(left: 50, right: 50)
+              : const EdgeInsets.all(0),
+          child: Column(
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(
+                      cat5,
+                      style: TextStyle(
+                          // color: Colors.white,
+                          fontFamily: 'LilitaOne',
+                          // fontWeight: FontWeight.bold,
+                          fontSize: MediaQuery.of(context).size.width >= 1100
+                              ? 30
+                              : 20),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                    ).tr(),
+                  ),
 
-                    // Padding(
-                    //   padding: const EdgeInsets.all(8.0),
-                    //   child: CountdownTimer(
-                    //     textStyle: TextStyle(
-                    //         fontWeight: FontWeight.bold,
-                    //         fontSize: MediaQuery.of(context).size.width >= 1100
-                    //             ? 18
-                    //             : 15),
-                    //     endTime:
-                    //         DateTime.parse(flashSales).millisecondsSinceEpoch,
-                    //     onEnd: () {
-                    //       // FirebaseFirestore.instance
-                    //       //     .collection('Flash Sales Products')
-                    //       //     .doc(productModel.uid)
-                    //       //     .delete();
-                    //       deleteAllDocumentsInCollection('Flash Sales');
-                    //     },
-                    //   ),
-                    // ),
-                    Padding(
-                      padding: MediaQuery.of(context).size.width >= 1100
-                          ? const EdgeInsets.all(0)
-                          : const EdgeInsets.all(8.0),
-                      child: Center(
-                        child: OutlinedButton(
-                          onPressed: () {
-                            context.push('/products/$cat5');
-                          },
-                          child: Text(
-                            'See All',
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                color: AdaptiveTheme.of(context).mode.isDark == true?Colors.white: Colors.black,
-                                fontSize:
-                                    MediaQuery.of(context).size.width >= 1100
-                                        ? 15
-                                        : 12),
-                          ).tr(),
-                        ),
+                  // Padding(
+                  //   padding: const EdgeInsets.all(8.0),
+                  //   child: CountdownTimer(
+                  //     textStyle: TextStyle(
+                  //         fontWeight: FontWeight.bold,
+                  //         fontSize: MediaQuery.of(context).size.width >= 1100
+                  //             ? 18
+                  //             : 15),
+                  //     endTime:
+                  //         DateTime.parse(flashSales).millisecondsSinceEpoch,
+                  //     onEnd: () {
+                  //       // FirebaseFirestore.instance
+                  //       //     .collection('Flash Sales Products')
+                  //       //     .doc(productModel.uid)
+                  //       //     .delete();
+                  //       deleteAllDocumentsInCollection('Flash Sales');
+                  //     },
+                  //   ),
+                  // ),
+                  Padding(
+                    padding: MediaQuery.of(context).size.width >= 1100
+                        ? const EdgeInsets.all(0)
+                        : const EdgeInsets.all(8.0),
+                    child: Center(
+                      child: OutlinedButton(
+                        onPressed: () {
+                          context.push('/products/$cat5');
+                        },
+                        child: Text(
+                          'See All',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color:
+                                  AdaptiveTheme.of(context).mode.isDark == true
+                                      ? Colors.white
+                                      : Colors.black,
+                              fontSize:
+                                  MediaQuery.of(context).size.width >= 1100
+                                      ? 15
+                                      : 12),
+                        ).tr(),
                       ),
                     ),
-                  ],
-                ),
-                loaded == true
-                    ? Card(
-                        semanticContainer: false,
-                        shape: const Border.fromBorderSide(BorderSide.none),
-                        color: MediaQuery.of(context).size.width >= 1100
-                            ? Colors.white
-                            : null,
-                        elevation: MediaQuery.of(context).size.width >= 1100
-                            ? 0.5
-                            : null,
-                        child: SizedBox(
-                          height: 200,
-                          //   width: double.infinity,
-                          child: ListView.builder(
-                            shrinkWrap: true,
-                            scrollDirection: Axis.horizontal,
-                            itemCount: 10,
-                            itemBuilder: (context, index) {
-                              return Shimmer.fromColors(
-                                baseColor: Colors.grey[300]!,
-                                highlightColor: Colors.grey[100]!,
-                                child: Container(
-                                  width: 170.0,
-                                  height: double.infinity,
-                                  margin: const EdgeInsets.all(8.0),
-                                  decoration: BoxDecoration(
-                                    color: Colors.white,
-                                    borderRadius: BorderRadius.circular(8.0),
-                                  ),
+                  ),
+                ],
+              ),
+              loaded == true
+                  ? Card(
+                      semanticContainer: false,
+                      shape: const Border.fromBorderSide(BorderSide.none),
+                      color: MediaQuery.of(context).size.width >= 1100
+                          ? Colors.white
+                          : null,
+                      elevation: MediaQuery.of(context).size.width >= 1100
+                          ? 0.5
+                          : null,
+                      child: SizedBox(
+                        height: 200,
+                        //   width: double.infinity,
+                        child: ListView.builder(
+                          shrinkWrap: true,
+                          scrollDirection: Axis.horizontal,
+                          itemCount: 10,
+                          itemBuilder: (context, index) {
+                            return Shimmer.fromColors(
+                              baseColor: Colors.grey[300]!,
+                              highlightColor: Colors.grey[100]!,
+                              child: Container(
+                                width: 170.0,
+                                height: double.infinity,
+                                margin: const EdgeInsets.all(8.0),
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(8.0),
                                 ),
-                              );
-                            },
-                          ),
+                              ),
+                            );
+                          },
                         ),
-                      )
-                    : SizedBox(
-                        height: 330,
-                        width: double.infinity,
-                        child: ProductsByCatWidget(
-                          cat: cat5,
-                        ))
-              ],
-            ),
-          )
+                      ),
+                    )
+                  : SizedBox(
+                      height: 330,
+                      width: double.infinity,
+                      child: ProductsByCatWidget(
+                        cat: cat5,
+                      ))
+            ],
+          ),
+        )
       ],
     );
   }

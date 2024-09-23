@@ -6,7 +6,6 @@ import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 // import '../Widget/add_flashsales.dart';
 
-
 class FlashSalesPage extends StatefulWidget {
   const FlashSalesPage({super.key});
 
@@ -16,7 +15,7 @@ class FlashSalesPage extends StatefulWidget {
 
 class _FlashSalesPageState extends State<FlashSalesPage> {
   DocumentReference? userRef;
-  String fullname = 'Olivette Vendor Dashboard';
+  String fullname = 'Emall Vendor Dashboard';
   String profilePic =
       'https://eitrawmaterials.eu/wp-content/uploads/2016/09/person-icon.png';
   String email = '';
@@ -76,7 +75,7 @@ class _FlashSalesPageState extends State<FlashSalesPage> {
   }
 
   bool? loggedIn;
- getSelectedRoute() {
+  getSelectedRoute() {
     Future.delayed(const Duration(seconds: 2), () async {
       final SharedPreferences prefs = await SharedPreferences.getInstance();
       final bool? repeat = prefs.getBool('logged in');
@@ -98,7 +97,7 @@ class _FlashSalesPageState extends State<FlashSalesPage> {
 
     return Scaffold(
       body: const SafeArea(
-        child:FlashSalesDatatable(),
+        child: FlashSalesDatatable(),
       ),
       floatingActionButton: MediaQuery.of(context).size.width >= 1100 ||
               MediaQuery.of(context).size.width > 600 &&
@@ -113,14 +112,14 @@ class _FlashSalesPageState extends State<FlashSalesPage> {
                 //         child: AddFlashSales(),
                 //       );
                 //     });
-                  // Fluttertoast.showToast(
-                  //   msg: "You can't delete this because its a test mode".tr(),
-                  //   toastLength: Toast.LENGTH_SHORT,
-                  //   gravity: ToastGravity.TOP,
-                  //   timeInSecForIosWeb: 1,
-                  //   backgroundColor: Theme.of(context).primaryColor,
-                  //   textColor: Colors.white,
-                  //   fontSize: 14.0);
+                // Fluttertoast.showToast(
+                //   msg: "You can't delete this because its a test mode".tr(),
+                //   toastLength: Toast.LENGTH_SHORT,
+                //   gravity: ToastGravity.TOP,
+                //   timeInSecForIosWeb: 1,
+                //   backgroundColor: Theme.of(context).primaryColor,
+                //   textColor: Colors.white,
+                //   fontSize: 14.0);
               },
               backgroundColor: Colors.blue.shade800,
               child: const Icon(Icons.add),

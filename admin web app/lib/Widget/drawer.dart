@@ -17,7 +17,7 @@ class SideMenu extends StatefulWidget {
 
 class _SideMenuState extends State<SideMenu> {
   DocumentReference? userRef;
-  String fullname = 'Olivete Admin';
+  String fullname = 'Emall Admin';
   bool profileExpansionTile = false;
   bool userExpansionTile = false;
   bool payoutExpansionTile = false;

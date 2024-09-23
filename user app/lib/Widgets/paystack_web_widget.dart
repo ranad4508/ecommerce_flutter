@@ -1,5 +1,5 @@
 import 'dart:math';
-import 'package:pay_with_paystack/pay_with_paystack.dart';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -8,6 +8,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:gap/gap.dart';
+import 'package:pay_with_paystack/pay_with_paystack.dart';
 import 'package:user_app/Model/formatter.dart';
 import 'package:user_app/Model/history.dart';
 //import 'package:user_app/Widgets/footer_widget.dart';
@@ -220,7 +221,7 @@ class _PaystackFormState extends State<PaystackForm> {
                           customerEmail: emailController.text,
                           reference:
                               DateTime.now().microsecondsSinceEpoch.toString(),
-                          callbackUrl: "https://olivette-store.web.app/wallet",
+                          callbackUrl: "https://emall-store.web.app/wallet",
                           currency: "NGN",
                           paymentChannel: ["mobile_money", "card"],
                           amount: (amount * 100).toString(),
@@ -228,7 +229,6 @@ class _PaystackFormState extends State<PaystackForm> {
                             // ignore: avoid_print
                             print("Transaction Successful");
                             updateWallet();
-                         
                           },
                           transactionNotCompleted: () {
                             // ignore: avoid_print

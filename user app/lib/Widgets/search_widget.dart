@@ -92,7 +92,7 @@ class _SearchWidgetState extends State<SearchWidget> {
               //   autofocus: widget.autoFocus,
               decoration: InputDecoration(
                   border: const OutlineInputBorder(),
-                  hintText: '$search Olivette Store',
+                  hintText: '$search Emall Store',
                   hintStyle: const TextStyle(fontSize: 13),
                   prefixIcon: const Icon(Icons.search),
                   suffixIcon: IconButton(
@@ -135,7 +135,7 @@ class _SearchWidgetState extends State<SearchWidget> {
                 height: double.infinity,
                 child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      shape:const RoundedRectangleBorder(
+                      shape: const RoundedRectangleBorder(
                           borderRadius: BorderRadius.all(Radius.circular(5))),
                       backgroundColor: appColor,
                     ),

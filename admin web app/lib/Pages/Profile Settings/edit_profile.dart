@@ -2,7 +2,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-
 class EditProfile extends StatefulWidget {
   const EditProfile({super.key});
 
@@ -12,7 +11,7 @@ class EditProfile extends StatefulWidget {
 
 class _EditProfileState extends State<EditProfile> {
   DocumentReference? userRef;
-  String fullname = 'Olivette Admin';
+  String fullname = 'Emall Admin';
   String profilePic =
       'https://eitrawmaterials.eu/wp-content/uploads/2016/09/person-icon.png';
   String email = 'admin123@gmail.com';
@@ -53,13 +52,13 @@ class _EditProfileState extends State<EditProfile> {
 
   @override
   Widget build(BuildContext context) {
-   return  const Scaffold(
-            body: SafeArea(
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [],
-              ),
-            ),
-          );
+    return const Scaffold(
+      body: SafeArea(
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [],
+        ),
+      ),
+    );
   }
 }

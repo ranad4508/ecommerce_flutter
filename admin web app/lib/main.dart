@@ -98,9 +98,9 @@ void main() async {
     options: DefaultFirebaseOptions.currentPlatform,
     // options: const FirebaseOptions(
     //     apiKey: "AIzaSyBSIiLOIQPOvbPiVtBlXGIrX5FSl4w-6rA",
-    //     authDomain: "olivette-ecommerce.firebaseapp.com",
-    //     projectId: "olivette-ecommerce",
-    //     storageBucket: "olivette-ecommerce.appspot.com",
+    //     authDomain: "emall-ecommerce.firebaseapp.com",
+    //     projectId: "emall-ecommerce",
+    //     storageBucket: "emall-ecommerce.appspot.com",
     //     messagingSenderId: "1095666484809",
     //     appId: "1:1095666484809:web:5447c6812158f62ea2e198",
     //     measurementId: "G-RLX6L2NLDS")

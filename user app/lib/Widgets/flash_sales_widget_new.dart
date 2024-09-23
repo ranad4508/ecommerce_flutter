@@ -146,6 +146,8 @@ class _FlashSalesWidgetNewState extends State<FlashSalesWidgetNew> {
                         fontSize: MediaQuery.of(context).size.width >= 1100
                             ? 30
                             : 20),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
                   ).tr(),
                 ),
                 // if (MediaQuery.of(context).size.width >= 1100)

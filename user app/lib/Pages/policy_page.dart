@@ -46,7 +46,7 @@ class _PolicyPageState extends State<PolicyPage> {
                     child: Row(
                       children: [
                         Text(
-                          'Privacy Policy For Olivette Store',
+                          'Privacy Policy For Emall Store',
                           style: TextStyle(
                               fontWeight: FontWeight.bold, fontSize: 20),
                           textAlign: TextAlign.left,

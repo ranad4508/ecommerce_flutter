@@ -2,8 +2,8 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import '../../Widget/CategoriesData/brands_datatable.dart';
 
+import '../../Widget/CategoriesData/brands_datatable.dart';
 
 class BrandsPage extends StatefulWidget {
   const BrandsPage({super.key});
@@ -14,7 +14,7 @@ class BrandsPage extends StatefulWidget {
 
 class _BrandsPageState extends State<BrandsPage> {
   DocumentReference? userRef;
-  String fullname = 'Olivette Admin';
+  String fullname = 'Emall Admin';
   String profilePic =
       'https://eitrawmaterials.eu/wp-content/uploads/2016/09/person-icon.png';
   String email = 'admin123@gmail.com';
@@ -65,9 +65,9 @@ class _BrandsPageState extends State<BrandsPage> {
   Widget build(BuildContext context) {
     getSelectedRoute();
     return const Scaffold(
-            body: SafeArea(
-              child: BrandsData(),
-            ),
-          );
+      body: SafeArea(
+        child: BrandsData(),
+      ),
+    );
   }
 }

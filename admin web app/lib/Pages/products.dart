@@ -5,7 +5,6 @@ import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../Widget/add_product_from_page.dart';
-
 import '../Widget/products_datatable.dart';
 
 class ProductsPage extends StatefulWidget {
@@ -17,7 +16,7 @@ class ProductsPage extends StatefulWidget {
 
 class _ProductsPageState extends State<ProductsPage> {
   DocumentReference? userRef;
-  String fullname = 'Olivette Vendor Dashboard';
+  String fullname = 'Emall Vendor Dashboard';
   String profilePic =
       'https://eitrawmaterials.eu/wp-content/uploads/2016/09/person-icon.png';
   String email = '';
@@ -77,7 +76,7 @@ class _ProductsPageState extends State<ProductsPage> {
   }
 
   bool? loggedIn;
- getSelectedRoute() {
+  getSelectedRoute() {
     Future.delayed(const Duration(seconds: 2), () async {
       final SharedPreferences prefs = await SharedPreferences.getInstance();
       final bool? repeat = prefs.getBool('logged in');

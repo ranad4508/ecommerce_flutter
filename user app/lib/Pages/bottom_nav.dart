@@ -6,6 +6,7 @@ import 'package:flutter_close_app/flutter_close_app.dart';
 import 'package:gap/gap.dart';
 // ignore: library_prefixes
 import 'package:modal_bottom_sheet/modal_bottom_sheet.dart' as modalSheet;
+
 import '../Model/categories.dart';
 import '../Widgets/collections_expanded_tile.dart';
 import 'home_page_2.dart';
@@ -85,6 +86,8 @@ class _BottomNavPageState extends State<BottomNavPage> {
                           child: const Text(
                             'Categories',
                             style: TextStyle(fontWeight: FontWeight.bold),
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
                           ).tr(),
                         ),
                       ],

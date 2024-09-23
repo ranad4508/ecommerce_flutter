@@ -107,7 +107,7 @@ class _ProductWidgetState extends State<ProductWidget> {
                     fontSize: 12,
                     decoration: TextDecoration.lineThrough,
                     color: Colors.grey),
-                // maxLines: 1,
+                maxLines: 1,
                 // textAlign: TextAlign.start,
                 overflow: TextOverflow.ellipsis,
               ),

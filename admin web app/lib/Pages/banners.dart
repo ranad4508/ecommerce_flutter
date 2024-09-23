@@ -4,8 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-
-
 class BannersPage extends StatefulWidget {
   const BannersPage({super.key});
 
@@ -15,7 +13,7 @@ class BannersPage extends StatefulWidget {
 
 class _BannersPageState extends State<BannersPage> {
   DocumentReference? userRef;
-  String fullname = 'Olivette Admin';
+  String fullname = 'Emall Admin';
   String profilePic =
       'https://eitrawmaterials.eu/wp-content/uploads/2016/09/person-icon.png';
   String email = 'admin123@gmail.com';
@@ -44,7 +42,7 @@ class _BannersPageState extends State<BannersPage> {
   }
 
   bool? loggedIn;
- getSelectedRoute() {
+  getSelectedRoute() {
     Future.delayed(const Duration(seconds: 2), () async {
       final SharedPreferences prefs = await SharedPreferences.getInstance();
       final bool? repeat = prefs.getBool('logged in');
@@ -63,10 +61,10 @@ class _BannersPageState extends State<BannersPage> {
   @override
   Widget build(BuildContext context) {
     getSelectedRoute();
-   return  const Scaffold(
-            body: SafeArea(
-              child: BannersDatatable(),
-            ),
-          );
+    return const Scaffold(
+      body: SafeArea(
+        child: BannersDatatable(),
+      ),
+    );
   }
 }

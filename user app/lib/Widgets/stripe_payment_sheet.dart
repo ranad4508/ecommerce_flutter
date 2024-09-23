@@ -9,6 +9,7 @@ import 'package:fluttertoast/fluttertoast.dart';
 import 'package:go_router/go_router.dart';
 import 'package:http/http.dart' as http;
 import 'package:user_app/Model/constant.dart';
+
 import 'stripe_button.dart';
 import 'stripe_scaffold.dart';
 
@@ -197,15 +198,16 @@ class _PaymentSheetScreenState extends State<PaymentSheetScreen> {
         'timeCreated': formattedDate
       });
       Fluttertoast.showToast(
-          msg: 'Payment succesfully completed',
-          toastLength: Toast.LENGTH_SHORT,
-          gravity: ToastGravity.TOP,
-          timeInSecForIosWeb: 1,
-          fontSize: 14.0).then((value) {
-            Future.delayed(const Duration(seconds: 2),(){
-              context.pop();
-            });
-          });
+              msg: 'Payment succesfully completed',
+              toastLength: Toast.LENGTH_SHORT,
+              gravity: ToastGravity.TOP,
+              timeInSecForIosWeb: 1,
+              fontSize: 14.0)
+          .then((value) {
+        Future.delayed(const Duration(seconds: 2), () {
+          context.pop();
+        });
+      });
     } on Exception catch (e) {
       if (e is StripeException) {
         Fluttertoast.showToast(

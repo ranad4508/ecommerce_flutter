@@ -1,11 +1,12 @@
+import 'package:admin_web_app/Widget/languageview.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:dropdown_button2/dropdown_button2.dart';
-import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
-import 'package:admin_web_app/Widget/languageview.dart';
+import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
 import '../Utils/Theme/theme.dart';
 import '../Utils/Theme/theme_data.dart';
 import '../Widget/drawer.dart';
@@ -22,7 +23,7 @@ class _HomePageMainState extends State<HomePageMain> {
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
   DocumentReference? userRef;
-  String fullname = 'Olivette Admin';
+  String fullname = 'Emall Admin';
   String profilePic =
       'https://eitrawmaterials.eu/wp-content/uploads/2016/09/person-icon.png';
   String email = 'admin123@gmail.com';
@@ -148,8 +149,8 @@ class _HomePageMainState extends State<HomePageMain> {
           DropdownButtonHideUnderline(
             child: DropdownButton2<String>(
               customButton: SizedBox(
-                width: MediaQuery.of(context).size.width >= 1100 ? 40: 40,
-                height: MediaQuery.of(context).size.width >= 1100 ? 40: 30,
+                width: MediaQuery.of(context).size.width >= 1100 ? 40 : 40,
+                height: MediaQuery.of(context).size.width >= 1100 ? 40 : 30,
                 child: CircleAvatar(
                   backgroundImage: NetworkImage(adminImage),
                   backgroundColor: Colors.transparent,

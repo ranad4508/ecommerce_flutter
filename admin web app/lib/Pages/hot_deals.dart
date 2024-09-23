@@ -9,7 +9,6 @@ import '../Widget/add_deals.dart';
 
 import '../Widget/hot_deals_datatable.dart';
 
-
 class HotDealsPage extends StatefulWidget {
   const HotDealsPage({super.key});
 
@@ -19,7 +18,7 @@ class HotDealsPage extends StatefulWidget {
 
 class _HotDealsPageState extends State<HotDealsPage> {
   DocumentReference? userRef;
-  String fullname = 'Olivette Vendor Dashboard';
+  String fullname = 'Emall Vendor Dashboard';
   String profilePic =
       'https://eitrawmaterials.eu/wp-content/uploads/2016/09/person-icon.png';
   String email = '';
@@ -79,7 +78,7 @@ class _HotDealsPageState extends State<HotDealsPage> {
   }
 
   bool? loggedIn;
- getSelectedRoute() {
+  getSelectedRoute() {
     Future.delayed(const Duration(seconds: 2), () async {
       final SharedPreferences prefs = await SharedPreferences.getInstance();
       final bool? repeat = prefs.getBool('logged in');

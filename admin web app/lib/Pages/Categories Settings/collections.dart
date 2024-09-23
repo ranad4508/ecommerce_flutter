@@ -5,7 +5,6 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../Widget/CategoriesData/collections_datatable.dart';
 
-
 class CollectionsPage extends StatefulWidget {
   const CollectionsPage({super.key});
 
@@ -15,7 +14,7 @@ class CollectionsPage extends StatefulWidget {
 
 class _CollectionsPageState extends State<CollectionsPage> {
   DocumentReference? userRef;
-  String fullname = 'Olivette Admin';
+  String fullname = 'Emall Admin';
   String profilePic =
       'https://eitrawmaterials.eu/wp-content/uploads/2016/09/person-icon.png';
   String email = 'admin123@gmail.com';
@@ -66,9 +65,9 @@ class _CollectionsPageState extends State<CollectionsPage> {
   Widget build(BuildContext context) {
     getSelectedRoute();
     return const Scaffold(
-            body: SafeArea(
-              child: CollectionsData(),
-            ),
-          );
+      body: SafeArea(
+        child: CollectionsData(),
+      ),
+    );
   }
 }

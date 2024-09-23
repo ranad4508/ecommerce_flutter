@@ -109,7 +109,7 @@ class _DesktopLoginState extends State<DesktopLogin>
               Padding(
                 padding: const EdgeInsets.only(left: 25),
                 child: Text(
-                  "OLIVETTE ADMIN",
+                  "Emall Admin",
                   style: TextStyle(
                       fontSize: 30,
                       fontWeight: FontWeight.bold,

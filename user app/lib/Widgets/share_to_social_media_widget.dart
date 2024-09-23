@@ -4,8 +4,8 @@ import 'package:clipboard/clipboard.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:url_launcher/url_launcher.dart';
 import 'package:gap/gap.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class ShareToSocials extends StatefulWidget {
   final String productID;
@@ -19,7 +19,7 @@ class _ShareToSocialsState extends State<ShareToSocials> {
   void shareToFacebook() async {
     // Construct the Facebook share URL
     final facebookShareUrl =
-        'https://www.facebook.com/sharer/sharer.php?u=https://olivette-store.web.app/product-detail/${widget.productID}';
+        'https://www.facebook.com/sharer/sharer.php?u=https://emall-store.web.app/product-detail/${widget.productID}';
 
     // Check if the URL can be launched
     if (await canLaunchUrl(Uri.parse(facebookShareUrl))) {
@@ -33,9 +33,9 @@ class _ShareToSocialsState extends State<ShareToSocials> {
 
   void shareToTwitter() async {
     // Encode the text and URL for Twitter
-    final encodedText = Uri.encodeComponent('Olivette Store');
+    final encodedText = Uri.encodeComponent('Emall Store');
     final encodedUrl = Uri.encodeComponent(
-        'https://olivette-store.web.app/product-detail/${widget.productID}');
+        'https://emall-store.web.app/product-detail/${widget.productID}');
 
     // Construct the Twitter share URL
     final twitterShareUrl =
@@ -60,7 +60,7 @@ class _ShareToSocialsState extends State<ShareToSocials> {
     if (await canLaunchUrl(Uri.parse(instagramUrl))) {
       // Launch Instagram with pre-filled caption and image
       await launchUrl(Uri.parse(
-          '$instagramUrl?text=Olivette Store&url=https://olivette-store.web.app/product-detail/${widget.productID}'));
+          '$instagramUrl?text=Emall Store&url=https://emall-store.web.app/product-detail/${widget.productID}'));
     } else {
       // Handle if the app cannot be launched
       print('Could not launch Instagram');
@@ -68,7 +68,8 @@ class _ShareToSocialsState extends State<ShareToSocials> {
   }
 
   void launchWhatsApp() async {
-    var whatsappUrl = "https://api.whatsapp.com/send?text=https://olivette-store.web.app/product-detail/${widget.productID}";
+    var whatsappUrl =
+        "https://api.whatsapp.com/send?text=https://emall-store.web.app/product-detail/${widget.productID}";
     await canLaunchUrl(Uri.parse(whatsappUrl))
         ? launchUrl(Uri.parse(whatsappUrl))
         : print(
@@ -107,7 +108,7 @@ class _ShareToSocialsState extends State<ShareToSocials> {
             InkWell(
                 onTap: () {
                   FlutterClipboard.copy(
-                          'https://olivette-store.web.app/product-detail/${widget.productID}')
+                          'https://emall-store.web.app/product-detail/${widget.productID}')
                       .then((value) => print('copied'));
                   Fluttertoast.showToast(
                       msg: "Link has been copied".tr(),
