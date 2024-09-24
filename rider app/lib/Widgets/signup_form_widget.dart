@@ -6,8 +6,8 @@ import 'package:firebase_messaging/firebase_messaging.dart';
 // import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:form_builder_validators/form_builder_validators.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
+import 'package:form_builder_validators/form_builder_validators.dart';
 import 'package:gap/gap.dart';
 import 'package:go_router/go_router.dart';
 import 'package:loader_overlay/loader_overlay.dart';
@@ -401,7 +401,7 @@ class _SignupFormWidgetState extends State<SignupFormWidget> {
                                       context.push('/terms');
                                     }),
                               const TextSpan(
-                                text: ' Olivette Stroe',
+                                text: ' Emall Stroe',
                                 // style: TextStyle(
                                 //   color: appColor,
                                 // ),

@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
 import 'package:go_router/go_router.dart';
-import 'package:url_launcher/url_launcher.dart';
 import 'package:rider_app/Model/constant.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class FooterWidget extends StatefulWidget {
   const FooterWidget({super.key});
@@ -59,7 +59,7 @@ class _FooterWidgetState extends State<FooterWidget> {
                             context.push('/about');
                           },
                           child: const Text(
-                            'About Olivette Store',
+                            'About Emall Store',
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: 12,
@@ -152,7 +152,7 @@ class _FooterWidgetState extends State<FooterWidget> {
                             _makePhoneCall(email);
                           },
                           child: const Text(
-                            'preciousoliver03@gmail.com',
+                            'ranad4508@gmail.com',
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: 10,
@@ -160,7 +160,7 @@ class _FooterWidgetState extends State<FooterWidget> {
                           ).tr(),
                         ),
                         const Text(
-                          'Olivette Store, Nigeria.',
+                          'Emall Store, Kathmandu.',
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 10,
@@ -230,7 +230,7 @@ class _FooterWidgetState extends State<FooterWidget> {
                               context.push('/about');
                             },
                             child: const Text(
-                              'About Olivette Store',
+                              'About Emall Store',
                               style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 12,
@@ -329,7 +329,7 @@ class _FooterWidgetState extends State<FooterWidget> {
                               _makePhoneCall(email);
                             },
                             child: const Text(
-                              'preciousoliver03@gmail.com',
+                              'ranad4508@gmail.com',
                               style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 10,
@@ -337,7 +337,7 @@ class _FooterWidgetState extends State<FooterWidget> {
                             ).tr(),
                           ),
                           const Text(
-                            'Olivette Store, Nigeria.',
+                            'Emall Store, Kathmandu.',
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: 10,
@@ -434,7 +434,7 @@ class _FooterWidgetState extends State<FooterWidget> {
           const Padding(
             padding: EdgeInsets.only(left: 20, right: 20),
             child: Text(
-              'The site is owned and operated by Olivette Store Limited – owners of Marketsquare - a company registered in Nigeria whose registered office is 23 Nzimiro Street, Old GRA, Port Harcourt, Rivers State, Nigeria. Company Registration No. 1181249, TIN No. 17810525 © 2023 olivette-store.web.app All Rights Reserved.',
+              'The site is owned and operated by Emall Store Limited - © 2024 All Rights Reserved.',
               style: TextStyle(color: Colors.white, fontSize: 10),
               textAlign: TextAlign.center,
             ),

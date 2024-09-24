@@ -14,7 +14,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
   final introKey = GlobalKey<IntroductionScreenState>();
 
   void _onIntroEnd(context) {
-   // context.push('/');
+    // context.push('/');
     GoRouter.of(context).go('/');
   }
 
@@ -60,8 +60,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
       pages: [
         PageViewModel(
           title: "Choose best products for you and your family...",
-          body:
-              "The app connects you to a Olivette Store to purchase your goods.",
+          body: "The app connects you to a Emall Store to purchase your goods.",
           image: _buildImage('notifications.jpg'),
           decoration: pageDecoration,
         ),

@@ -1,25 +1,22 @@
 // ignore_for_file: avoid_print
 
+import 'package:adaptive_theme/adaptive_theme.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/foundation.dart';
 // import 'package:firebase_messaging/firebase_messaging.dart';
 // import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:adaptive_theme/adaptive_theme.dart';
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:go_router/go_router.dart';
 import 'package:loader_overlay/loader_overlay.dart';
 import 'package:meta_seo/meta_seo.dart';
 import 'package:provider/provider.dart';
-import 'package:flutter_local_notifications/flutter_local_notifications.dart';
-import 'package:firebase_messaging/firebase_messaging.dart';
-import 'package:shared_preferences/shared_preferences.dart';
-
-import 'package:url_strategy/url_strategy.dart';
 // import 'package:flutter_dotenv/flutter_dotenv.dart';
 // import 'package:url_strategy/url_strategy.dart';
 import 'package:rider_app/Model/user.dart';
@@ -38,6 +35,9 @@ import 'package:rider_app/Providers/auth.dart';
 import 'package:rider_app/Widgets/scaffold_widget.dart';
 // import 'package:rider_app/Widgets/scaffold_widget.dart';
 import 'package:rider_app/firebase_options.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:url_strategy/url_strategy.dart';
+
 import 'Pages/about_page.dart';
 // import 'Pages/home_page.dart';
 import 'Pages/login_page.dart';
@@ -248,9 +248,9 @@ class _MyAppState extends State<MyApp> {
       // Define MetaSEO object
       MetaSEO meta = MetaSEO();
       // add meta seo data for web app as you want
-      meta.author(author: 'Oliver Precious Chukwuemeka');
-      meta.description(description: 'Olivette store');
-      meta.keywords(keywords: 'Flutter, Dart, SEO, Meta, Web, olivette store');
+      meta.author(author: 'Dinesh Kumar Rana');
+      meta.description(description: 'Emall store');
+      meta.keywords(keywords: 'Flutter, Dart, SEO, Meta, Web, Emall store');
     }
     return AdaptiveTheme(
         light: ThemeData(
@@ -282,7 +282,7 @@ class _MyAppState extends State<MyApp> {
               supportedLocales: context.supportedLocales,
               locale: context.locale,
               debugShowCheckedModeBanner: false,
-              title: 'Olivette Ecommerce | Online Shopping',
+              title: 'Emall Ecommerce | Online Shopping',
               theme: theme,
               darkTheme: darkTheme,
             ),
@@ -409,7 +409,6 @@ class _MyAppState extends State<MyApp> {
               }
             }),
 
-    
         GoRoute(
             path: '/inbox',
             builder: (BuildContext context, GoRouterState state) =>
@@ -459,8 +458,6 @@ class _MyAppState extends State<MyApp> {
             ),
           ),
         ),
-
-     
 
         // ShellRoute(
         //   navigatorKey: _shellNavigatorKey,

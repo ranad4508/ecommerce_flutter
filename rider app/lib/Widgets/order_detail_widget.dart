@@ -11,11 +11,12 @@ import 'package:gap/gap.dart';
 import 'package:go_router/go_router.dart';
 import 'package:loader_overlay/loader_overlay.dart';
 import 'package:maps_launcher/maps_launcher.dart';
-import 'package:shimmer/shimmer.dart';
 import 'package:rider_app/Model/formatter.dart';
 import 'package:rider_app/Model/history.dart';
 import 'package:rider_app/Model/order_model.dart';
+import 'package:shimmer/shimmer.dart';
 import 'package:url_launcher/url_launcher.dart';
+
 import 'cat_image_widget.dart';
 
 class OrderDetailWidget extends StatefulWidget {
@@ -982,7 +983,7 @@ class _ResultState extends State<Result> {
                               //         children: <TextSpan>[
                               //           TextSpan(
                               //             text: cartModel.vendorName.isEmpty
-                              //                 ? ' Olivette Store'
+                              //                 ? ' Emall Store'
                               //                 : cartModel.vendorName,
                               //             style: const TextStyle(
                               //               color: Colors.blue,
