@@ -29,7 +29,7 @@ class _SignupFormWidgetState extends State<SignupFormWidget> {
   String email = '';
   String phone = '';
   String password = '';
-  String dailCode = '+234';
+  String dailCode = '+977';
   // final _formKey = GlobalKey<FormState>();
   // Timer? oneSignalTimer;
   String playerId = '';
@@ -198,7 +198,7 @@ class _SignupFormWidgetState extends State<SignupFormWidget> {
                       });
                     },
                     // Initial selection and favorite can be one of code ('IT') OR dial_code('+39')
-                    initialSelection: 'NG',
+                    initialSelection: 'NP',
                     // favorite: const ['+39', 'FR'],
                     //  countryFilter: const ['IT', 'FR'],
                     showFlagDialog: true,

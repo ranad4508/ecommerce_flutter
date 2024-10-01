@@ -271,7 +271,7 @@ class _MyAppState extends State<MyApp> {
               //ignored progress for the moment
               return const Center(
                 child: SpinKitCubeGrid(
-                  color: Colors.orange,
+                  color: Colors.blueAccent,
                   size: 50.0,
                 ),
               );
